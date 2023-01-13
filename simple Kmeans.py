@@ -1,5 +1,5 @@
 import pandas as pd
-from sklearn.cluster import kMeans
+from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 import nltk
@@ -46,7 +46,7 @@ pd.DataFrame(np.round(tv_matrix,2), columns = vocab)
 similarity_matrix = cosine_similarity(tv_matrix)
 similarity_df = pd.DataFrame(similarity_matrix)
 
-km = kMeans(n_clusters = 2)
+km = KMeans(n_clusters = 2)
 km.fit_transform(similarity_df)
 cluster_labels = km.labels_
 cluster_labels = pd.DataFrame(cluster_labels, columns = ['ClusterLabel'])
