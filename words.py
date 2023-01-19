@@ -1,7 +1,7 @@
 import nltk
-import re, numpy as np, pandas as pd
+import re, numpy as np#, pandas as pd
 
-nltk.download('stopwords')
+
 corpus = ['The sky is blue and beautiful.',
     'Love this blue and beautiful sky!',
     'The quick brown fox jumps over the lazy dog.',
@@ -9,11 +9,12 @@ corpus = ['The sky is blue and beautiful.',
     'The sky is very blue and the sky is very beautiful today',
     'The dog is lazy but the brown fox is quick!'
     ]
-labels = ['weather', 'weather', 'animals', 'animals', 'weather', 'animals']
-corpus = np.array(corpus)
-corpus_df = pd.DataFrame({'Document': corpus,
-    'Category': labels})
-corpus_df = corpus_df[['Document', 'Category']]
+# labels = ['weather', 'weather', 'animals', 'animals', 'weather', 'animals']
+# corpuses = np.array(corpus)
+# corpus_df = pd.DataFrame({'Document': corpuses,
+#     'Category': labels})
+# corpus_df = corpus_df[['Document', 'Category']]
+# print(corpus_df)
 
 wpt = nltk.WordPunctTokenizer()
 stop_words = nltk.corpus.stopwords.words('english')

@@ -3,7 +3,9 @@ from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 import nltk
-import re, numpy as np, pandas as pd
+import re 
+import numpy as np
+import pandas as pd
 
 corpus = ['The sky is blue and beautiful.',
     'Love this blue and beautiful sky!',
@@ -13,8 +15,8 @@ corpus = ['The sky is blue and beautiful.',
     'The dog is lazy but the brown fox is quick!'
     ]
 labels = ['weather', 'weather', 'animals', 'animals', 'weather', 'animals']
-corpus = np.array(corpus)
-corpus_df = pd.DataFrame({'Document': corpus,
+corpus_1 = np.array(corpus)
+corpus_df = pd.DataFrame({'Document': corpus_1,
     'Category': labels})
 corpus_df = corpus_df[['Document', 'Category']]
 
